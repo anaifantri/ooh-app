@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import "tailwindcss";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.jsx';
+@source '../**/*.js';
+
+@layer base {
+    body {
+        font-family: "Poppins", sans-serif;
+    }
+}
+
+@layer components {
+    input[type="text"],
+    input[type="date"],
+    input[type="number"],
+    input[type="email"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="url"],
+    textarea {
+        @apply rounded-md border border-slate-200 text-stone-900 shadow-inner tracking-wider outline-none bg-white;
+    }
+    /* label {
+        @apply block text-sm font-medium leading-6 text-slate-900 first-letter:capitalize;
+    }
+    header {
+        @apply bg-slate-800 shadow-md;
+    }
+    nav {
+        @apply p-5 max-w-lg mx-auto flex items-center justify-between;
+    }
+    main {
+        @apply max-w-lg mx-auto;
+    } */
+    .flex-all-center {
+        @apply flex items-center justify-center;
+    }
+    .nav-link {
+        @apply flex justify-center items-center w-full text-teal-300 relative group-hover:text-teal-600 cursor-pointer;
+    }
+    .li-nav-link {
+        @apply flex my-1 w-full text-teal-600 hover:text-teal-400 text-sm;
+    }
+    .nav-svg {
+        @apply w-4 fill-current;
+    }
+    .button-disabled {
+        @apply bg-slate-500 text-white rounded-lg p-1;
+    }
+    .button-success {
+        @apply bg-green-500 text-white rounded-lg p-1 hover:bg-green-700 mx-1;
+    }
+    .button-primary {
+        @apply bg-teal-500 text-white rounded-lg p-1 hover:bg-teal-700 mx-1;
+    }
+    .button-warning {
+        @apply bg-amber-500 text-white rounded-lg p-1 hover:bg-amber-700 mx-1;
+    }
+    .button-danger {
+        @apply bg-red-500 text-white rounded-lg p-1 hover:bg-red-700 mx-1;
+    }
+    .th-center {
+        @apply border border-stone-900 text-stone-900;
+    }
+    .td-center {
+        @apply text-center px-1 border border-stone-900 text-stone-900;
+    }
+    .td-left {
+        @apply px-1 border border-stone-900 text-stone-900;
+    }
+    .td-right {
+        @apply text-right px-1 border border-stone-900 text-stone-900;
+    }
+    .spinner-disabled {
+        @apply [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none;
+    }
+    .my-select-container .select__control {
+        @apply border border-amber-700;
+    }
+}
