@@ -139,6 +139,9 @@ Route::get('/purchase-orders/edit/{orderId}', function () {
 Route::get('/inbounds', function () {
     return inertia('Inbounds/Index',['message' => request('message'), 'failed'=>request('failed')]);
 });
+Route::get('/inbounds/create', function () {
+    return inertia('Inbounds/Create');
+});
 Route::get('/inbounds/show/{orderId}', function () {
     return inertia('Inbounds/Show',['message' => request('message')]);
 });
